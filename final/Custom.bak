@@ -2,22 +2,25 @@
 	(version 20231120)
 	(generator "kicad_symbol_editor")
 	(generator_version "8.0")
-	(symbol "Conn_01x10_Pin"
+	(symbol "+3V3_1"
+		(power)
+		(pin_numbers hide)
 		(pin_names
-			(offset 1.016) hide)
+			(offset 0) hide)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "J"
-			(at 0 12.7 0)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Value" "Conn_01x10_Pin"
-			(at 0 -15.24 0)
+		(property "Value" "+3V3_1"
+			(at 0 3.556 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33,33 +36,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at -9.144 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x10, script generated"
-			(at 38.1 0.254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "ki_locked" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "connector"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(effects
 				(font
@@ -68,7 +45,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 0 0 0)
 			(effects
 				(font
@@ -77,13 +54,22 @@
 				(hide yes)
 			)
 		)
-		(symbol "Conn_01x10_Pin_1_1"
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "+3V3_1_0_1"
 			(polyline
 				(pts
-					(xy 1.27 -12.7) (xy 0.8636 -12.7)
+					(xy -0.762 1.27) (xy 0 2.54)
 				)
 				(stroke
-					(width 0.1524)
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -92,10 +78,10 @@
 			)
 			(polyline
 				(pts
-					(xy 1.27 -10.16) (xy 0.8636 -10.16)
+					(xy 0 0) (xy 0 2.54)
 				)
 				(stroke
-					(width 0.1524)
+					(width 0)
 					(type default)
 				)
 				(fill
@@ -104,214 +90,22 @@
 			)
 			(polyline
 				(pts
-					(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					(xy 0 2.54) (xy 0.762 1.27)
 				)
 				(stroke
-					(width 0.1524)
+					(width 0)
 					(type default)
 				)
 				(fill
 					(type none)
 				)
 			)
-			(polyline
-				(pts
-					(xy 1.27 -5.08) (xy 0.8636 -5.08)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 -2.54) (xy 0.8636 -2.54)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 0) (xy 0.8636 0)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 2.54) (xy 0.8636 2.54)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 5.08) (xy 0.8636 5.08)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 7.62) (xy 0.8636 7.62)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 1.27 10.16) (xy 0.8636 10.16)
-				)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(rectangle
-				(start 0 0.127)
-				(end 0.8636 -0.127)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 -12.573)
-				(end 0 -12.827)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 -10.033)
-				(end 0 -10.287)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 -7.493)
-				(end 0 -7.747)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 -4.953)
-				(end 0 -5.207)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 -2.413)
-				(end 0 -2.667)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 2.667)
-				(end 0 2.413)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 5.207)
-				(end 0 4.953)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 7.747)
-				(end 0 7.493)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(rectangle
-				(start 0.8636 10.287)
-				(end 0 10.033)
-				(stroke
-					(width 0.1524)
-					(type default)
-				)
-				(fill
-					(type outline)
-				)
-			)
-			(pin output line
-				(at 5.08 10.16 180)
-				(length 3.81)
-				(name "Pin_1"
+		)
+		(symbol "+3V3_1_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -326,17 +120,119 @@
 					)
 				)
 			)
-			(pin output line
-				(at 5.08 -12.7 180)
-				(length 3.81)
-				(name "Pin_10"
+		)
+	)
+	(symbol "+3V3_2"
+		(power)
+		(pin_numbers hide)
+		(pin_names
+			(offset 0) hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3_2"
+			(at 0 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "+3V3_2_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "+3V3_2_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "10"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -344,17 +240,119 @@
 					)
 				)
 			)
-			(pin output line
-				(at 5.08 7.62 180)
-				(length 3.81)
-				(name "Pin_2"
+		)
+	)
+	(symbol "+3V3_3"
+		(power)
+		(pin_numbers hide)
+		(pin_names
+			(offset 0) hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3_3"
+			(at 0 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "+3V3_3_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "+3V3_3_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -362,17 +360,119 @@
 					)
 				)
 			)
-			(pin output line
-				(at 5.08 5.08 180)
-				(length 3.81)
-				(name "Pin_3"
+		)
+	)
+	(symbol "170V_1"
+		(power)
+		(pin_numbers hide)
+		(pin_names
+			(offset 0) hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "170V_1"
+			(at 0 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "170V_1_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "170V_1_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "3"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -380,107 +480,119 @@
 					)
 				)
 			)
-			(pin output line
-				(at 5.08 2.54 180)
-				(length 3.81)
-				(name "Pin_4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+		)
+	)
+	(symbol "170V_2"
+		(power)
+		(pin_numbers hide)
+		(pin_names
+			(offset 0) hide)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+				(hide yes)
+			)
+		)
+		(property "Value" "170V_2"
+			(at 0 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
-			(pin output line
-				(at 5.08 0 180)
-				(length 3.81)
-				(name "Pin_5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "170V_2_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
-			(pin output line
-				(at 5.08 -2.54 180)
-				(length 3.81)
-				(name "Pin_6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
 				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
-			(pin output line
-				(at 5.08 -5.08 180)
-				(length 3.81)
-				(name "Pin_7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
 				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
 				)
 			)
-			(pin output line
-				(at 5.08 -7.62 180)
-				(length 3.81)
-				(name "Pin_8"
+		)
+		(symbol "170V_2_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name "~"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 5.08 -10.16 180)
-				(length 3.81)
-				(name "Pin_9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
