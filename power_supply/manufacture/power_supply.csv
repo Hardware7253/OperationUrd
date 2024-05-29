@@ -1,0 +1,17 @@
+"Comment";"Designator";"Footprint";"JLCPCB Part #";"Mouser Part #";"Quantity"
+"MAX1771ESA+T";"U1";"SO-8_3.9x4.9mm_P1.27mm";"C407903";;1
+"68u";"C1";"EEE-FN1E680P";"C494823";;1
+"100n/250v";"C5";"C_1206_3216Metric";"C5137643";;1
+"IRF644PBF";"Q1";"TO-220-3_Vertical";;"844-IRF644PBF ";1
+"Conn_01x10_Pin";"J2";"PinHeader_1x10_P2.54mm_Vertical";;;1
+"1M5";"R1";"R_2512_6332Metric";"C3013328";;1
+"100n";"C6";"C_0603_1608Metric";"C14663";;1
+"0.05R";"RS1";"R_1206_3216Metric_Pad1.30x1.75mm_HandSolder";"C912768";;1
+"100p/250v";"C3";"C_0805_2012Metric";"C2929108";;1
+"ES2F-E3/5BT";"D1";"D_SMB";"C222525";;1
+"100uH";"L1";"SMDRS1275-101N";"C163688";;1
+"Conn_01x10_Pin";"J3";"IDC-Header_2x05_P2.54mm_Vertical";;;1
+"10k";"R2";"R_0603_1608Metric";"C25804";;1
+"1u";"C2";"C_0603_1608Metric";"C15849";;1
+"4.7u/250v";"C4";"CP_Radial_D8.0mm_P3.50mm";;"80-A759KS475M2EAE496";1
+"10k";"RV1";"Potentiometer_Bourns_3266W_Vertical";"C123430";;1
