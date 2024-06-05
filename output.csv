@@ -1,5 +1,5 @@
 "Comment";"Designator";"Footprint";"JLCPCB Part #";"Mouser Part #";"Quantity"
-"10k";;"R_0603_1608Metric";"C25804";;27
+"10k";;"R_0603_1608Metric";"C25804";;24
 "MMBTA92";;"SOT-23";"C85182";;8
 "10k";;"R_1206_3216Metric";"C17902";;16
 "412k";;"R_1206_3216Metric";"C323043";;19
@@ -7,12 +7,11 @@
 "~";;"IN12";;;8
 "74HC595";;"SOIC-16_3.9x9.9mm_P1.27mm";"C5947";;3
 "100k";;"R_0603_1608Metric";"C25803";;1
-"Conn_01x10_Pin";;"IDC-Header_2x05_P2.54mm_Vertical";;;2
+"Conn_01x10_Pin";;"IDC-Header_2x05_P2.54mm_Vertical";;;4
 "MAX1771ESA+T";;"SO-8_3.9x4.9mm_P1.27mm";"C407903";;1
 "68u";;"EEE-FN1E680P";"C494823";;1
 "100n/250v";;"C_1206_3216Metric";"C5137643";;1
 "IRF644PBF";;"TO-220-3_Vertical";;"844-IRF644PBF ";1
-"Conn_01x10_Pin";;"PinHeader_1x10_P2.54mm_Vertical";;;2
 "1M5";;"R_2512_6332Metric";"C3013328";;1
 "100n";;"C_0603_1608Metric";"C14663";;7
 "0.05R";;"R_1206_3216Metric_Pad1.30x1.75mm_HandSolder";"C912768";;1
@@ -25,13 +24,11 @@
 "22u";;"C_0805_2012Metric";"C45783";;2
 "DS3231MZ";;"SOP-8_4.93mmxP1.27mm";"C107410";;1
 "USB_C_Receptacle";;"USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal";"C2927302";;1
+"Conn_01x04_Pin";;"PinHeader_1x04_P2.54mm_Vertical";;;3
 "14p";;"C_0603_1608Metric";"C1644";;2
-"SW_SPST";;"PinHeader_1x02_P2.54mm_Vertical";;;3
-"Conn_01x04_Pin";;"PinHeader_1x04_P2.54mm_Vertical";;;1
 "RED";;"LED_0603_1608Metric";"C2286";;1
 "1k5";;"R_0603_1608Metric";"C22843";;3
 "SolderJumper_2_Open";;"PinHeader_1x02_P2.54mm_Vertical";;;2
-"Conn_01x05_Pin";;"PinHeader_1x05_P2.54mm_Vertical";;;1
 "5k1";;"R_0603_1608Metric";"C23186";;2
 "Battery";;"BAT-HLD-005-THM";;"712-BAT-HLD-005-THM";1
 "10n";;"C_0603_1608Metric";"C57112";;1

@@ -152,7 +152,6 @@ def add_to_master_bom(master_bom_dict, bom_dict):
 
     for key, value in bom_id_dict.items():
         master_key, master_value = convert_from_id(key, value)
-        print(master_key, master_value)
         if master_key in master_bom_dict:
             master_bom_dict[master_key] += master_value
         else:
