@@ -162,8 +162,7 @@ def main():
     """Program entry point, path settings go here"""
 
     # It is assumed that the file name is in the format "project_name".csv
-    project_names = ["nixie_board", "power_supply", "microcontroller"]
-    #project_names = ["nixie_board"]
+    project_names = ["nixie_board", "power_supply", "microcontroller", "toggle_switch_breakout", "mechanical_switch_breakout"]
     sub_directory = "manufacture" # Sub directory which bom csv is located in
 
     sample_bom_path = "output.csv"

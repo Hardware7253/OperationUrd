@@ -8,7 +8,7 @@ zip_gerbers() {
     cd $project_root
 }
 
-projects=("microcontroller" "nixie_board" "power_supply")
+projects=("microcontroller" "nixie_board" "power_supply" "toggle_switch_breakout" "mechanical_switch_breakout")
 
 for project_name in "${projects[@]}"; do
     zip_gerbers $project_name

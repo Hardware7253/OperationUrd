@@ -26,6 +26,7 @@
 "USB_C_Receptacle";;"USB_C_Receptacle_GCT_USB4125-xx-x-0190_6P_TopMnt_Horizontal";"C2927302";;1
 "Conn_01x04_Pin";;"PinHeader_1x04_P2.54mm_Vertical";;;3
 "14p";;"C_0603_1608Metric";"C1644";;2
+"D_Zener";;"D_SOD-323";C5143684;;3
 "RED";;"LED_0603_1608Metric";"C2286";;1
 "1k5";;"R_0603_1608Metric";"C22843";;3
 "SolderJumper_2_Open";;"PinHeader_1x02_P2.54mm_Vertical";;;2
@@ -38,3 +39,6 @@
 "AMS1117-3.3";;"SOT-223-3_TabPin2";"C6186";;1
 "STM32F103CBTx";;"LQFP-48_7x7mm_P0.5mm";"C8304";;1
 "8Mhz";;"Crystal_SMD_3225-4Pin_3.2x2.5mm";"C403948";;1
+"SW_SPST";;"MTS-101";;;2
+"Conn_01x04_Pin";;"PinHeader_1x04_P2.54mm_Horizontal";;;2
+"SW_SPST";;"SW_Cherry_MX_1.00u_PCB";;;3
