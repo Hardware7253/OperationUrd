@@ -499,7 +499,7 @@
       "plot": "manufacture/gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../cad/PCB steps/power_supply.step",
       "svg": "",
       "vrml": ""
     },

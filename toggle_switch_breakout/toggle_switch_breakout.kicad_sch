@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Toggle Switch Breakout Schematic")
-		(date "2024-06-07")
-		(rev "0.1.0")
+		(date "2024-06-08")
+		(rev "0.1.1")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x04_Pin"
@@ -398,7 +398,27 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 78.74) (xy 121.92 68.58)
+			(xy 121.92 66.04) (xy 130.81 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01a81443-7114-465f-8d1c-1946ef8c3d00")
+	)
+	(wire
+		(pts
+			(xy 119.38 68.58) (xy 119.38 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0416799d-0a4c-4ec1-8543-9ceceae657fa")
+	)
+	(wire
+		(pts
+			(xy 121.92 66.04) (xy 121.92 78.74)
 		)
 		(stroke
 			(width 0)
@@ -428,13 +448,13 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 68.58) (xy 130.81 68.58)
+			(xy 119.38 68.58) (xy 130.81 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "78218a28-65ec-4608-968e-29a16b38ef1e")
+		(uuid "478e6d36-2a84-4ea8-b507-b76c7a173037")
 	)
 	(wire
 		(pts
@@ -445,16 +465,6 @@
 			(type default)
 		)
 		(uuid "7881b9de-11be-444e-873c-7aae161404a5")
-	)
-	(wire
-		(pts
-			(xy 119.38 66.04) (xy 119.38 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a3470eb-9d40-412c-b947-b88a59407935")
 	)
 	(wire
 		(pts
@@ -475,16 +485,6 @@
 			(type default)
 		)
 		(uuid "8ef884a0-1cab-4af5-904e-6832fd544963")
-	)
-	(wire
-		(pts
-			(xy 119.38 66.04) (xy 130.81 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae7cbbab-a65e-4505-905a-bebe7e61673e")
 	)
 	(wire
 		(pts
@@ -577,7 +577,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 135.89 66.04 0)
 			(effects
 				(font

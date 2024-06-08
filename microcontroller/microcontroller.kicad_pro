@@ -505,7 +505,7 @@
       "plot": "manufacture/gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../cad/PCB steps/microcontroller.step",
       "svg": "",
       "vrml": ""
     },
