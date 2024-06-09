@@ -495,7 +495,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "manufacture/",
+      "plot": "manufacture/gerbers/",
       "pos_files": "manufacture/",
       "specctra_dsn": "",
       "step": "../cad/PCB steps/nixie_board.step",
@@ -506,6 +506,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
