@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Power Supply PCB")
-		(date "2024-06-06")
-		(rev "0.1.1")
+		(date "2024-06-16")
+		(rev "0.1.2")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -1366,6 +1366,7 @@
 		(property "Reference" "J2"
 			(at 1.27 -6.1 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "1e85b873-4a74-4c0a-8331-2bdaa5fc02e8")
 			(effects
 				(font

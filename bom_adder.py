@@ -165,7 +165,7 @@ def main():
     project_names = ["nixie_board", "power_supply", "microcontroller", "toggle_switch_breakout", "mechanical_switch_breakout"]
     sub_directory = "manufacture" # Sub directory which bom csv is located in
 
-    sample_bom_path = "output.csv"
+    sample_bom_path = "master_bom.csv"
     sample_bom_dict = dict()
     sample_bom_id_dict = dict()
     use_sample_bom = True
@@ -194,7 +194,7 @@ def main():
         add_to_master_bom(master_bom_dict, bom_dict)
 
     # Write master bom
-    output_master_bom_path = "output.csv"
+    output_master_bom_path = "master_bom.csv"
     output_formatted_bom(master_bom_dict, output_master_bom_path)
 
 main()

@@ -28,13 +28,13 @@
 "14p";;"C_0603_1608Metric";"C1644";;2
 "D_Zener";;"D_SOD-323";C5143684;;3
 "RED";;"LED_0603_1608Metric";"C2286";;1
-"1k5";;"R_0603_1608Metric";"C22843";;3
+"2k2";;"R_0603_1608Metric";"C4190";;3
 "SolderJumper_2_Open";;"PinHeader_1x02_P2.54mm_Vertical";;;2
 "5k1";;"R_0603_1608Metric";"C23186";;2
 "Battery";;"BAT-HLD-005-THM";;"712-BAT-HLD-005-THM";1
 "10n";;"C_0603_1608Metric";"C57112";;1
 "10u";;"C_0603_1608Metric";"C19702";;1
-"120R";;"L_0603_1608Metric";"C96702";;1
+"120R";;"R_0603_1608Metric";;;1
 "5k-500k";;"R_LDR_5.0x4.1mm_P3mm_Vertical";"C125626";;1
 "AMS1117-3.3";;"SOT-223-3_TabPin2";"C6186";;1
 "STM32F103CBTx";;"LQFP-48_7x7mm_P0.5mm";"C8304";;1
