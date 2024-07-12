@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/oxnh/Code/Rust/EmbeddedRustExamples/blink/target/thumbv7m-none-eabi/debug/build/typenum-53ba9add07dafe6a/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/oxnh/Code/Rust/EmbeddedRustExamples/blink/target/thumbv7m-none-eabi/debug/build/typenum-53ba9add07dafe6a/out/op.rs

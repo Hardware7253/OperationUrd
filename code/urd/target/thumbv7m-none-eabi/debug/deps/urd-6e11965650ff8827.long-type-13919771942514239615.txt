@@ -1,0 +1,1 @@
+stm32f1xx_hal::spi::Spi<P, R, (stm32f1xx_hal::gpio::Pin<P_1, C, stm32f1xx_hal::gpio::Alternate>, stm32f1xx_hal::spi::NoMiso, stm32f1xx_hal::gpio::Pin<P_1, D, stm32f1xx_hal::gpio::Alternate>), u8>

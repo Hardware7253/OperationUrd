@@ -1,0 +1,28 @@
+[package]
+name = "urd"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = 'z' # turn on maximum optimizations. We only have 64kB
+lto = true      # Link-time-optimizations for further size reduction
+
+[dependencies]
+arrform = "0.1.1"
+cortex-m = "^0.7.7"       # Access to the generic ARM peripherals
+cortex-m-rt = "^0.7.3"   # Startup code for the ARM Core
+ds323x = "0.5.1"
+embedded-hal = "^1.0.0"   # Access to generic embedded functions (`set_high`)
+panic-rtt-core = "0.2.1"
+rand = { version = "0.8.5", features = ["small_rng"], default-features = false }
+
+
+
+# Access to the STM32F103 HAL.
+[dependencies.stm32f1xx-hal]
+# STM32F103C8T6 contains a 64kB flash variant which is called "medium density"
+features = ["stm32f103", "rt", "medium"]
+version = "^0.10.0"
+

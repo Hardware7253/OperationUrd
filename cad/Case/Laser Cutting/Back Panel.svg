@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 2245.0392 1587.4016"
+   width="594mm"
+   height="420mm"
+   version="1.1"
+   id="svg73"
+   sodipodi:docname="Back Panel.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview73"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0734779"
+     inkscape:cx="250.12159"
+     inkscape:cy="284.589"
+     inkscape:window-width="1406"
+     inkscape:window-height="1411"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g65"
+     inkscape:document-units="mm" />
+  <desc
+     id="desc1">Back Panel.dxf - scale = 1.000000, origin = (0.000000, 0.000000), method = manual</desc>
+  <defs
+     id="defs4">
+    <marker
+       id="DistanceX"
+       orient="auto"
+       refX="0"
+       refY="0"
+       style="overflow:visible">
+      <path
+         d="M 3,-3 -3,3 M 0,-5 V 5"
+         style="stroke:#000000;stroke-width:0.5"
+         id="path1" />
+    </marker>
+    <pattern
+       id="Hatch"
+       patternUnits="userSpaceOnUse"
+       width="8"
+       height="8"
+       x="0"
+       y="0">
+      <path
+         d="M8 4 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path2" />
+      <path
+         d="M6 2 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path3" />
+      <path
+         d="M4 0 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path4" />
+    </pattern>
+    <symbol
+       id="*MODEL_SPACE" />
+    <symbol
+       id="*PAPER_SPACE" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="0"
+     id="g4" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SECTION_CUTTING_LINE"
+     id="g5" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="DETAIL_VIEW_BORDER"
+     id="g6" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="DETAIL_VIEW_PARENT_BORDER"
+     id="g7" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="TEXT"
+     id="g8" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SKETCHED_GEOMETRY"
+     id="g9"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="VIRTUAL_SHARPS"
+     id="g10" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="CENTERLINES"
+     id="g11" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="CENTERMARKS"
+     id="g12" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="TABLES"
+     id="g13" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="IMAGES"
+     id="g14" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="ANNOTATION_LINES"
+     id="g15" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="ANNOTATION_TEXT"
+     id="g16" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SIDE_THREAD_SYMBOLS"
+     id="g17" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SIDE_THREAD_SYMBOLS_HIDDEN"
+     id="g18" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SURFACE_THREAD_SYMBOLS"
+     id="g19" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SURFACE_THREAD_SYMBOLS_ON_"
+     id="g20" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SURFACE_THREAD_SYMBOLS_HID"
+     id="g21" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="BLIND_THREAD_SYMBOLS"
+     id="g22" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="BLIND_THREAD_SYMBOLS_HIDDE"
+     id="g23" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="EXPLODE_LINES"
+     id="g24" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="HIDDEN_EXPLODE_LINES"
+     id="g25" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="BREAK_LINES"
+     id="g26" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SHEETMETAL_BEND_LINES_UP"
+     id="g27" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SHEETMETAL_BEND_LINES_DOWN"
+     id="g28" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SHEETMETAL_BEND_TANGENT_LI"
+     id="g29" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SHEETMETAL_CUT_LINES"
+     id="g30" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="REGION_ASSOC_POINTS"
+     id="g31" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="PATTERN_CENTERLINES"
+     id="g32" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="HIDDEN"
+     id="g33" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="VISIBLE"
+     id="g34" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="MODELSKETCH_VISIBLE"
+     id="g65">
+    <path
+       d="m 45.971866,305.88804 a 6.047245,6.047245 0 0 0 -12.09449,0 6.047245,6.047245 0 0 0 12.09449,0 z"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       id="path42" />
+    <path
+       d="m 45.971866,40.187253 a 6.047245,6.047245 0 0 0 -12.09449,0 6.047245,6.047245 0 0 0 12.09449,0 z"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       id="path44" />
+    <path
+       d="m 901.27901,40.187253 a 6.04727,6.04727 0 0 0 -12.09454,0 6.04727,6.04727 0 0 0 12.09454,0 z"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       id="path46" />
+    <path
+       d="m 901.27901,305.88804 a 6.04727,6.04727 0 0 0 -12.09454,0 6.04727,6.04727 0 0 0 12.09454,0 z"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       id="path47" />
+    <path
+       id="path62"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       d="M 910.91721,318.73796 V 27.336963 M 27.074166,321.57796 H 908.08221 M 24.239166,27.336963 V 318.73796 m 4.2e-4,4.7e-4 a 2.834646,2.834646 0 0 0 2.83464,2.83465 m 881.007884,0 a 2.834646,2.834646 0 0 0 2.8347,-2.83465 M 27.074226,24.502213 a 2.834646,2.834646 0 0 0 -2.83464,2.83465 m 2.83458,-2.8349 H 908.08221 m 2.8346,2.8349 a 2.834646,2.834646 0 0 0 -2.8347,-2.83465" />
+    <path
+       id="path65"
+       style="fill:none;stroke:#0000ff;stroke-width:0.0133333;stroke-dasharray:none;stroke-opacity:1"
+       d="m 445.08999,267.90378 a 3.779528,3.779528 0 0 0 -3.77953,-3.77952 m -28.72441,0 a 3.779528,3.779528 0 0 0 -3.77953,3.77952 m 36.28346,7.93418 v -7.93 m -3.77952,11.71236 a 3.779528,3.779528 0 0 0 3.77953,-3.77953 m -32.50391,3.77717 h 28.7244 m -28.72443,-15.4937 a 3.779528,3.779528 0 0 0 -3.77953,3.77952 m 32.50396,-3.77582 h -28.7244 m 28.72438,15.49236 a 3.779528,3.779528 0 0 0 3.77953,-3.77953 m -36.28347,0 a 3.779528,3.779528 0 0 0 3.77953,3.77953 m 32.50393,-11.71236 v 7.93 m -36.2835,0 v -7.93 m 32.504,11.71 h -28.7244 m 0,-15.49 h 28.7244 m -32.50396,11.71283 a 3.779528,3.779528 0 0 0 3.77953,3.77953 m 32.50394,-11.71654 a 3.779528,3.779528 0 0 0 -3.77953,-3.77952 m -32.50398,3.7837 v 7.93" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="MODELSKETCH_POINT"
+     id="g66" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="MODELSKETCH_CONSTRUCTION"
+     id="g67" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="HIDDEN_BASE_VIEW"
+     id="g68" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="TANGENT_LINES"
+     id="g69" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="TANGENT_HIDDEN"
+     id="g70" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="INVISIBLE_LINES"
+     id="g71" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="VIEW_HATCHES"
+     id="g72" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="SECTION_JOG_LINES"
+     id="g73" />
+</svg>

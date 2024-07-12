@@ -1,0 +1,5 @@
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv7m
+cargo:rustc-link-search=/home/oxnh/Code/Rust/Embedded/blink/target/thumbv7m-none-eabi/debug/build/cortex-m-rt-9a618455daa0c071/out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in
