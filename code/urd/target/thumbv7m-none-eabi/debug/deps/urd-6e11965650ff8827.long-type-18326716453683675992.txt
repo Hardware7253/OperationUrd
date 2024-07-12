@@ -1,1 +1,0 @@
-Ds323x<I2cInterface<BlockingI2c<I2C2, (stm32f1xx_hal::gpio::Pin<'B', 10, stm32f1xx_hal::gpio::Alternate<stm32f1xx_hal::gpio::OpenDrain>>, stm32f1xx_hal::gpio::Pin<'B', 11, stm32f1xx_hal::gpio::Alternate<stm32f1xx_hal::gpio::OpenDrain>>)>>, DS3231>
