@@ -1,1 +1,0 @@
-stm32f1xx_hal::spi::Spi<stm32f1xx_hal::pac::SPI2, Spi2NoRemap, (stm32f1xx_hal::gpio::Pin<'B', 13, stm32f1xx_hal::gpio::Alternate>, stm32f1xx_hal::spi::NoMiso, stm32f1xx_hal::gpio::Pin<'B', 15, stm32f1xx_hal::gpio::Alternate>), u8>

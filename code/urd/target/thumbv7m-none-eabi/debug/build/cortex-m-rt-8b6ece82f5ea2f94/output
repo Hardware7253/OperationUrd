@@ -1,6 +1,0 @@
-cargo:rustc-link-lib=static=cortex-m-rt
-cargo:rustc-cfg=cortex_m
-cargo:rustc-cfg=armv7m
-cargo:rustc-link-search=/home/oxnh/Code/Rust/EmbeddedRustExamples/blink/target/thumbv7m-none-eabi/debug/build/cortex-m-rt-8b6ece82f5ea2f94/out
-cargo:rerun-if-changed=build.rs
-cargo:rerun-if-changed=link.x.in
