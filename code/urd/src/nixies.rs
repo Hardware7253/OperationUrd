@@ -8,7 +8,9 @@ use hal::{
     prelude::*
 };
 
-pub const ALL_NIXIE_CHARACTERS: [char; 11] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']; // All possible characters which can be displayed on the tubes
+// All possible characters which can be displayed on the tubes
+// Presented in the array in the order they are placed within the tube
+pub const ALL_NIXIE_CHARACTERS: [char; 11] = ['1', '2', '6', '7', '5', '0', '4', '9', '8', '3', '.'];
 
 
 // Struct contains pins and spi bus which are used to interface with the VFD display

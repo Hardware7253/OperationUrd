@@ -5,7 +5,7 @@ pub fn ms_to_cycles(millis: u64, clock_mhz: u64) -> u64 {
     millis * clock_mhz * 1000
 }
 
-// Adds a number to another number
+// Adds a number to another number, min and max inclusive
 // If the sum is greater than the max value, rollover
 // Return calculated value or original sum
 // E.g. add_with_rollover(5, 7, 0, 10) -> 2

@@ -7,12 +7,11 @@ pub struct Button<const P: char, const N: u8, M> {
     pub pin: Pin<P, N, Input<M>>, // Button pin
 
     pub press_raw: bool, // true if the switch pin is high
-    pub press_start_cycle: Option<u64>, // Processor cycles elapsed when the button starting being pressed
+    pub press_start_cycle: Option<u64>, // Processor cycles elapsed when the button started being pressed
 
 
-    pub long_press_cycles: u64, // Cycles that must elapse between currenct clock cycle and press_start_cycle for a press to be considered a long press
+    pub long_press_cycles: u64, // Cycles that must elapse between current clock cycle and press_start_cycle for a press to be considered a long press
     pub long_press: bool, // true if a long press has been registered
-
 
     pub last_press_cycle: u64, // Processor cycles elapsed when the button was last pressed
     pub debounce_cycles: u64, // Minimum number of processor cycles between button presses

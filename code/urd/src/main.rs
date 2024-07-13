@@ -58,6 +58,8 @@ const CLOCK_MHZ: u32 = 72;
 
 const ANTI_POISON_INTERVAL_MS: u64 = 10 * 60 * 1000; // 10 Minutes between anti poison routines
 const ANTI_POISON_DURATION_MS: u64 = 15 * 1000; // Anti poison routines last for 15 seconds
+const ANIT_POISON_PATTERN: [usize; 8] = [3, 1, 4, 0, 6, 2, 7, 5]; // What character each display starts showing during the anti poison routine
+//const ANIT_POISON_PATTERN: [usize; 8] = [0, 1, 2, 3, 4, 5, 6, 7]; // This pattern creates a wave
 
 #[entry]
 fn main() -> ! {
@@ -141,8 +143,10 @@ fn main() -> ! {
 
 
 
+    // Create a cycle counter struct to accurately keep track of elapsed clock cycles
     let mut cycle_counter = cycle_counter::Counter::new();
 
+    // Setup switch pins has pulldown
     let on_switch_pin = gpioa.pa6.into_pull_down_input(&mut gpioa.crl);
     let mode_switch_pin = gpioa.pa7.into_pull_down_input(&mut gpioa.crl);
 
@@ -153,12 +157,13 @@ fn main() -> ! {
         button::Button::new(gpioa.pa3.into_pull_down_input(&mut gpioa.crl)),
     );
 
-    let mut requested_adjust_last_loop = false;
-    let mut time_adjust = false; // True when the users wants to adjust the clock time
-    let mut divergence_index = 0;
+    let mut time_adjust; // True when the users wants to adjust the clock time
+    let mut can_exit_time_adjust = false;
+    let mut divergence_index = 0; // Current index for the DIVERGENCE_NUMBERS constant
 
     // How many clock cyclces have to be elapsed before the anti-poison routine starts
-    let mut activate_anti_posion_cycles = ms_to_cycles(ANTI_POISON_INTERVAL_MS, CLOCK_MHZ as u64);
+    // This is reset after each anti-poison routine
+    let mut activate_anti_posion_cycles = 0;
 
     loop {
         if on_switch_pin.is_high() { // Only do nixie stuff when the on switch is high
@@ -172,18 +177,43 @@ fn main() -> ! {
                 let mut small_rng = SmallRng::seed_from_u64(cycle_counter.cycles);
                 divergence_index = small_rng.gen_range(0..DIVERGENCE_NUMBERS.len());
                 
+                let mut increasing = [true; 8]; // Indicates wether the character index for each nixe is increasing or decreasing
+                let mut current_indices = ANIT_POISON_PATTERN; // Current character index for each nixie
 
                 // Anti poison routine
+                // Lights each cathode in order
                 while cycle_counter.cycles < deactivate_anti_posion_cycles {
                     cycle_counter.update();
 
+                    // Update indices
                     for i in 0..nixies::SELECT_BITS.len() {
-                        cycle_counter.update();
+                        
+                        // Increase ALL_NIXIE_CHARACTERS index for next iteration
+                        let mut new_index = if increasing[i] {
+                            current_indices[i] as i32 + 1
+                        } else {
+                            current_indices[i] as i32 - 1
+                        };
 
-                        let mut small_rng = SmallRng::seed_from_u64(cycle_counter.cycles);
-                        let random_character_index = small_rng.gen_range(0..nixies::ALL_NIXIE_CHARACTERS.len());
-                        nixies.write_char(nixies::ALL_NIXIE_CHARACTERS[random_character_index], i, &mut delay);
-                        delay.delay_ms(5u32);
+                        if new_index < 0  {
+                            new_index = 1;
+                            increasing[i] = true;
+                        }
+
+                        if new_index > nixies::ALL_NIXIE_CHARACTERS.len() as i32 - 1 {
+                            new_index = nixies::ALL_NIXIE_CHARACTERS.len() as i32 - 2;
+                            increasing[i] = false;
+                        }
+
+                        current_indices[i] = new_index as usize;
+                    }
+
+                    // Display
+                    for _ in 0..7 {
+                        for i in 0..nixies::SELECT_BITS.len() {
+                            nixies.write_char(nixies::ALL_NIXIE_CHARACTERS[current_indices[i]], i, &mut delay);
+                            delay.delay_ms(1u32);
+                        }
                     }
                 }
 
@@ -196,23 +226,18 @@ fn main() -> ! {
                 cycle_counter.update();
 
                 // Update button structs
-                let button_0_pressed = buttons.0.pressed(cycle_counter.cycles);
-                let button_1_pressed = buttons.1.pressed(cycle_counter.cycles);
-                let button_2_pressed = buttons.2.pressed(cycle_counter.cycles);
+                buttons.0.pressed(cycle_counter.cycles);
+                buttons.1.pressed(cycle_counter.cycles);
+                buttons.2.pressed(cycle_counter.cycles);
 
-
-
-                // Toggle the time_adjust variable when the users holds on all 3 time adjusting buttons 
-                let requesting_adjust = buttons.0.long_press && buttons.1.long_press && buttons.2.long_press;
-
-                if !requesting_adjust {
-                    requested_adjust_last_loop = false;
+                // Prevent time adjust mode being reactivated immedeately after leaving time adjust mode
+                // Because the buttons would still all be registering a long press
+                if (!buttons.0.press_raw || !buttons.1.press_raw || !buttons.2.press_raw) && can_exit_time_adjust {
+                    can_exit_time_adjust = false;
                 }
 
-                if requesting_adjust & !requested_adjust_last_loop {
-                    requested_adjust_last_loop = true;
-                    time_adjust = !time_adjust;
-                }
+                // If all 3 buttons are held down activate time adjust mode
+                time_adjust = buttons.0.long_press && buttons.1.long_press && buttons.2.long_press && !can_exit_time_adjust;
 
 
                 
@@ -224,10 +249,26 @@ fn main() -> ! {
 
 
 
-                // Adjust time
-                if time_adjust {
-                    // Increment hours minutes and seconds when their respective buttons are pressed
+                // Run time adjust mode in a while loop to prevent the rtc from incrementing the hours, minutes, or seconds while the user is trying to adjust.
+                while time_adjust {
+                    cycle_counter.update();
 
+                    // Update button structs
+                    let button_0_pressed = buttons.0.pressed(cycle_counter.cycles);
+                    let button_1_pressed = buttons.1.pressed(cycle_counter.cycles);
+                    let button_2_pressed = buttons.2.pressed(cycle_counter.cycles);
+
+                    // Once any button is released it becomes possible for the user to exit time adjust mode
+                    if (!buttons.0.press_raw || !buttons.1.press_raw || !buttons.2.press_raw) && !can_exit_time_adjust {
+                        can_exit_time_adjust = true;
+                    }
+
+                    // If the user activates another long press exit time adjust mode
+                    if buttons.0.long_press && buttons.1.long_press && buttons.2.long_press && can_exit_time_adjust {
+                        time_adjust = false;
+                    }
+
+                    // Increment hours minutes and seconds when their respective buttons are pressed
                     if button_0_pressed && !buttons.1.press_raw && !buttons.2.press_raw {
                         hour = add_with_rollover(hour, 1, 0, 23);
                     }
@@ -239,7 +280,7 @@ fn main() -> ! {
                     if button_2_pressed && !buttons.0.press_raw && !buttons.1.press_raw {
                         second = add_with_rollover(second, 1, 0, 59);
                     }
-                    
+
                     // Update rtc datetime
                     if button_0_pressed || button_1_pressed || button_2_pressed {
                         let datetime = rtc.date()
@@ -247,31 +288,29 @@ fn main() -> ! {
                         .and_hms_opt(hour, minute, second)
                         .unwrap();
                         rtc.set_datetime(&datetime).unwrap();
-                    }            
+                    }
+
+                    // Dsiplay adjusted time
+                    let time_af = arrform!(64, "{}{} {}{} {}{}", 
+                        hour / 10, hour % 10,
+                        minute / 10, minute % 10,
+                        second / 10, second % 10,
+                    );
+
+                    nixies.display_str(time_af.as_str(), &mut delay);
                 }
 
-                // Format time
-                // Only show decimal points when not in time adjust mode
-                let time_af = if time_adjust {
-                    arrform!(64, "{}{} {}{} {}{}", 
+                // Display time
+                let time_af = arrform!(64, "{}{}.{}{}.{}{}", 
                         hour / 10, hour % 10,
                         minute / 10, minute % 10,
                         second / 10, second % 10,
-                    )
-                } else {
-                    arrform!(64, "{}{}.{}{}.{}{}", 
-                        hour / 10, hour % 10,
-                        minute / 10, minute % 10,
-                        second / 10, second % 10,
-                    )
-                };
+                );
 
-                // Display time on nixie tubes
                 nixies.display_str(time_af.as_str(), &mut delay);
             }
         } else {
             nixies.turn_off(&mut delay);
         }
-        delay.delay_ms(1u32);
     }
 }
