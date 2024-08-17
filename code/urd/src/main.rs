@@ -147,14 +147,14 @@ fn main() -> ! {
     let mut cycle_counter = cycle_counter::Counter::new();
 
     // Setup switch pins has pulldown
-    let on_switch_pin = gpioa.pa6.into_pull_down_input(&mut gpioa.crl);
-    let mode_switch_pin = gpioa.pa7.into_pull_down_input(&mut gpioa.crl);
+    let on_switch_pin = gpioa.pa7.into_pull_down_input(&mut gpioa.crl);
+    let mode_switch_pin = gpiob.pb0.into_pull_down_input(&mut gpiob.crl);
 
     // Buttons for adjusting the time
     let mut buttons = (
-        button::Button::new(gpioa.pa5.into_pull_down_input(&mut gpioa.crl)),
-        button::Button::new(gpioa.pa4.into_pull_down_input(&mut gpioa.crl)),
-        button::Button::new(gpioa.pa3.into_pull_down_input(&mut gpioa.crl)),
+        button::Button::new(gpioa.pa3.into_pull_down_input(&mut gpioa.crl)), // Adjust hours
+        button::Button::new(gpioa.pa4.into_pull_down_input(&mut gpioa.crl)), // Adjust minutes
+        button::Button::new(gpioa.pa5.into_pull_down_input(&mut gpioa.crl)), // Adjust seconds
     );
 
     let mut time_adjust; // True when the users wants to adjust the clock time
